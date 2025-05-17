@@ -804,97 +804,134 @@ opacity: 1;
   }
 }
 
+.activity-gallery {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: -10px;
+}
+
 .about-me {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: -1400px auto -500px auto;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  top: var(--about-me-top, -100pxy); /* Gunakan variabel CSS untuk mengatur top */
 }
 
 .about-me .div {
   overflow: hidden;
-  width: 1440px;
-  height: 3061px;
+  width: 100%; /* Mengubah dari fixed width ke responsive */
+  max-width: 1440px;
+  height: auto; /* Mengubah dari fixed height ke auto */
   position: relative;
-
+  margin: 0 auto;
 }
 
 .about-me .overlap {
-  position: absolute;
-  width: 2700px;
-  height: 3000px;
-  top: -871px;
-  left: -304px;
-}
-
-
-.about-me .text-wrapper-11 {
-  position: absolute;
-  top: 2386px;
-  left: 914px;
-  font-family: "Work Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #713f91;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.about-me .vector-2 {
-  position: absolute;
-  width: 236px;
-  height: 36px;
-  top: 2432px;
-  left: 904px;
-}
-
-.about-me .eksperience-conten {
-  position: absolute;
-  width: 992px;
-  height: 952px;
-  top: 2524px;
-  left: 528px;
-}
-
-.about-me .group-3 {
-  position: absolute;
-  width: 482px;
-  height: 645px;
-  top: 304px;
-  left: 0;
-}
-
-.about-me .group-4 {
-  position: absolute;
-  width: 488px;
-  height: 275px;
-  top: 677px;
-  left: 504px;
-}
-
-.about-me .group-5 {
-  position: absolute;
-  width: 488px;
-  height: 649px;
-  top: 10px;
-  left: 504px;
-}
-
-.about-me .group-6 {
-  position: absolute;
-  width: 491px;
-  height: 286px;
+  position: relative; /* Mengubah dari absolute ke relative */
+  width: 100%;
+  max-width: 1200px; /* Membatasi lebar maksimal */
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 0;
   top: 0;
   left: 0;
 }
 
+.about-me .text-wrapper-11 {
+  text-align: center;
+  position: relative; /* Mengubah dari absolute ke relative */
+  margin-bottom: 20px;
+  font-family: "Work Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #713f91;
+  font-size: 40px;
+}
+
+.about-me .vector-2 {
+  display: block;
+  width: 236px;
+  height: 36px;
+  margin: 0 auto 40px;
+  position: relative; /* Mengubah dari absolute ke relative */
+}
+
+.about-me .eksperience-conten {
+   position: relative;
+   width: 100%;
+   max-width: 992px;
+   height: auto;
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: 
+     "group6 group5"
+     "group3 group4";
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+   padding: 20px;
+}
+
+.about-me .eksperience-conten {
+   position: relative;
+   width: 100%;
+   max-width: 992px;
+   height: auto;
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: 
+     "group6 group5"
+     "group3 group4";
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+   padding: 20px;
+}
+
+.about-me .group-3 {
+   position: absolute;
+   width: 450px; /* Mengubah dari 300px menjadi 450px untuk memperbesar ukuran */
+   height: 645;
+   top: 310px;
+   left: 26px;
+}
+
+.about-me .group-4 {
+   position: relative;
+   width: 100%;
+   height: auto;
+   grid-area: group4;
+   aspect-ratio: 16/9;
+}
+
+.about-me .group-5 {
+   position: relative;
+   width: 100%;
+   height: auto;
+   grid-area: group5;
+   aspect-ratio: 3/4;
+}
+
+.about-me .group-6 {
+   position: relative;
+   width: 100%;
+   height: auto;
+   grid-area: group6;
+   aspect-ratio: 16/9;
+}
+
+.about-me .group-3 img,
+.about-me .group-4 img,
+.about-me .group-5 img,
+.about-me .group-6 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
 /* Contact Section Styles */
 .contact-section {
     padding: 80px 0;
@@ -1172,6 +1209,88 @@ opacity: 1;
 }
 
 .footer-sosmed a:hover {
+  background: #b882e3;
+  color: #fff;
+  border-color: #b882e3;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    align-items: center;
+    padding: 0 10px;
+  }
+  .footer-logo img {
+    height: 60px;
+  }
+  .footer-brand {
+    font-size: 1rem;
+  }
+}
+
+.footer-wrapper2 {
+  background: linear-gradient(135deg, #b782e3b0 0%, #7ddfea61 50%, #ccfce2a1 100%);
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.footer-glass-layer2 {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3); /* bening */
+  width: 100%;
+  padding: 40px 0 30px 0;
+}
+
+.footer-container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
+ display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.footer-logo2 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-logo2 img {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-info2 {
+  color: #444;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.footer-sosmed2 {
+  display: flex;
+  gap: 13px;
+  margin-top: -5px;
+}
+
+.footer-sosmed2 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #d1b2e0;
+  color: #b882e3;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-sosmed2 a:hover {
   background: #b882e3;
   color: #fff;
   border-color: #b882e3;
