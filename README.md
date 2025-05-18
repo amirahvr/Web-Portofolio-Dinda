@@ -3,6 +3,7 @@
 1. Happy Wafiwah Akmal
    rata kiri kanan new update
    ![image](https://github.com/user-attachments/assets/a9459a4d-4d58-4158-b5c3-7ac9db903adb)
+   
 3. Rezky Angelina Pailang
    footer kosong bagian kanan
 4. Nafila Agand
