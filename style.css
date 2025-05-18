@@ -501,6 +501,7 @@ opacity: 1;
   margin-top: 10px;
   font-weight: 500;
   line-height: 1.35;
+  text-align: justify;
 }
 
 .new-update-right {
@@ -508,7 +509,7 @@ opacity: 1;
   display: flex;
   flex-direction: column;
   margin-top: 120px;
-  gap: 17px;
+  gap: 25px;
   min-width: 320px;
 }
 
@@ -1237,7 +1238,7 @@ opacity: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: inherit;
-    border: 2px solid #e6d5f9;
+    border: 2px solid #b276f7;
     transition: all 0.3s ease;
     position: relative;
     padding: 15px;
@@ -1250,7 +1251,7 @@ opacity: 1;
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
-    margin: 35px auto 10px auto; /* Mengatur margin atas-bawah dan auto untuk kiri-kanan */
+    margin: 40px auto 10px auto; /* Mengatur margin atas-bawah dan auto untuk kiri-kanan */
 }
 
 .blog-content {
@@ -1416,6 +1417,151 @@ opacity: 1;
         flex-direction: column;
     }
 }
+
+/* Blog Post Styles */
+.blog-post {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.back-button {
+    position: absolute;
+    top: -90px; /* Menggeser ke atas di luar container */
+    left: -15px; /* Menggeser ke kiri di luar container */
+    color: #713F91;
+    font-size: 40px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.back-button:hover {
+    color: #FF69B4;
+    transform: translateX(-5px);
+}
+
+.post-container {
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.blog-post .hero-bg {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 35%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        circle,
+        rgba(114, 69, 187, 0.5) 0%,   
+        rgba(178, 155, 255, 0.4) 25%, 
+        rgba(155, 255, 225, 0.7) 70%, 
+        rgba(155, 255, 165, 0.6) 90%, 
+        rgba(255, 255, 255, 0.2) 100%  
+    );
+    filter: blur(180px);
+    z-index: -1;
+    opacity: 1;
+}
+
+.post-container {
+    padding: 20px;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.category-tag.girlhood {
+    background: #FFE6F1;
+    color: #FF69B4;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-date {
+    color: #666;
+    font-size: 14px;
+}
+
+.divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+.post-title {
+    font-size: 36px;
+    color: #FF69B4;
+    text-align: center;
+    margin: 30px 0;
+    line-height: 1.3;
+}
+
+.content-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+.text-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.signature {
+    text-align: right;
+    color: #FF69B4;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-title {
+        font-size: 28px;
+    }
+}
+
 
 .footer-wrapper {
   background: linear-gradient(135deg, #b782e3b0 0%, #7ddfea61 50%, #ccfce2a1 100%);
