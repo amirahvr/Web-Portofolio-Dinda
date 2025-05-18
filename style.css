@@ -963,6 +963,10 @@ opacity: 1;
     overflow: hidden;
 }
 
+.contact-section .container {
+    margin-bottom: 100px; /* Alternatif menggunakan margin di container */
+}
+
 .contact-content {
     display: flex;
     justify-content: space-between;
@@ -1206,17 +1210,58 @@ opacity: 1;
 /* Blog Section Styles */
 .blog-section {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     padding: 60px 0;
-    margin-top: 100px;
+    margin-top: 60px;
+}
+
+.blog-section .container {
+    margin-bottom: 100px; 
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 380px); /* Mengatur lebar tetap untuk setiap kolom */
+    gap: 25px;
     margin-top: 50px;
+    padding: 0 20px;
+    justify-content: center; /* Mengatur grid ke tengah */
 }
+
+.blog-card {
+    width: 380px; /* Lebar tetap untuk card */
+    height: 450px; /* Tinggi tetap untuk card */
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #e6d5f9;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card img {
+    width: 350px; /* Lebar gambar lebih kecil dari card */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 35px auto 10px auto; /* Mengatur margin atas-bawah dan auto untuk kiri-kanan */
+}
+
+.blog-content {
+    padding: 15px 10px 5px 10px;
+    background: white;
+    position: relative;
+    flex-grow: 1; /* Mengisi sisa ruang */
+    display: flex;
+    flex-direction: column;
+}
+
 
 .blog-section .hero-bg {
      content: "";
@@ -1237,17 +1282,6 @@ opacity: 1;
    filter: blur(180px);
    z-index: -1;
    opacity: 1;
-}
-
-.blog-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
 }
 
 .blog-card:hover {
@@ -1275,21 +1309,19 @@ opacity: 1;
     color: #9370DB;
 }
 
-.blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.blog-content {
-    padding: 20px;
-    position: relative;
-}
-
 .blog-content h3 {
     font-size: 18px;
     margin-bottom: 10px;
     color: #333;
+}
+
+.blog-section h1 {
+    font-size: 55px;
+    font-weight: 780;
+    text-align: center;
+    color: #7f3db4;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Atur jarak antar baris di sini */
 }
 
 .blog-content p {
@@ -1301,10 +1333,58 @@ opacity: 1;
 
 .read-more {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     color: #9370DB;
     font-weight: bold;
+    justify-content: flex-end;
+}
+
+/* Search Box Styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #e6d5f9;
+    border-radius: 25px;
+    padding: 5px 15px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    border-color: #c490e4;
+    box-shadow: 0 4px 15px rgba(127, 61, 180, 0.1);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: #c490e4;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: #7f3db4;
 }
 
 /* Responsive Design */
